@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>web-study</title>
-    </head>
-    <body>
-        <h1>오늘 할 일</h1>
-        <h5>2023.06.11</h5>
-        <div>영역1</div>
-        <p>한 줄 요약 : 12시 전에 <span style="color:blueviolet">침대에 눕지 않기</span> 성공</p>
-        <br/>
-        <hr/>
-        <br/>
-        <div>영역2</div>
-        <ul>
-            <li>아침에 일어나서 자연광 받기</li>
-            <li>어제 하던 공부 이어하기</li>
-            <li>아더 & 초원이랑 인사하기</li>
-            <li>설겆이</li>
-            <li>저녁에 카페가서 빡공</li>
-        </ul>
-        <input type="time"/>
-        <input type="text"/>
-        <button>업데이트</button>
-        <div>영역3</div>
-        <img src="mypets.jpg" width="50%"/>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>To Do List</h1>
+
+  <input id='colorchange' type="button" value="change your day" onclick="
+    if(document.querySelector('#colorchange').value === 'change your day'){
+      document.querySelector('body').style.backgroundColor = 'powderblue';
+      document.querySelector('body').style.color = 'red';
+      document.querySelector('#colorchange').value = 'back to boring life';
+    } else{
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#colorchange').value = 'change your day';
+    }
+  ">
+
+  <div>area</div>
+  <div>area2</div>
+  <hr/>
+
+  <p>Write a <span style="color:powderblue">long</span> sentence here</p>
+  <ul>
+    <li>To do the wash</li>
+    <li>To go for a walk with Athor</li>
+    <li>To say Hi to Chowon</li>
+  </ul>
+  <input type="text"/>
+  <button>input</button>
+  <img scr="mypets">
+</body>
 </html>

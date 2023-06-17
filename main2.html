@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <h1><a href="index.html">Today's Work</a></h1>
+    
+    <input class="CYD" type="button" value="Change your day" onclick="
+        if(document.querySelector('.CYD').value === 'Change your day'){
+            document.querySelector('body').style.backgroundColor = 'pink';
+            document.querySelector('body').style.color = 'yellow';
+            document.querySelector('.CYD').value = 'Calm your day';
+        } else{
+            document.querySelector('body').style.backgroundColor = 'green';
+            document.querySelector('body').style.color = 'skyblue';
+            document.querySelector('.CYD').value = 'Change your day';
+        }
+    ">
+
+    <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){ 
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'powderblue';
+                i = i + 1;
+                }
+        } else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i + 1;
+                }
+        }
+        ">
+
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="1.html">CSS</a></li>
+            <li><a href="1.html">JavaScript</a></li>
+        </ol>
+
+
+    <p>In mathematics, the derivative shows the sensitivity of change of a function's output with respect to the input. Derivatives are a fundamental tool of calculus. For example, the derivative of the position of a moving object with respect to time is the object's velocity: this measures how quickly the position of the object changes when time advances.
+        <br/>
+        <br/>
+    The derivative of a function of a single variable at a chosen input value, when it exists, is the slope of the tangent line to the graph of the function at that point. The tangent line is the best linear approximation of the function near that input value. For this reason, the derivative is often described as the "instantaneous rate of change", the ratio of the instantaneous change in the dependent variable to that of the independent variable.</p>
+</body>
+
+</html>
