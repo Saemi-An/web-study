@@ -6,32 +6,16 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>To Do List</h1>
+  <div id="checkboxes">
+    <label>Today's work</label>
+    <ul style="list-style-type: none">
+      <li><input type="checkbox"> Go out for a walk</li>
+      <li><input type="checkbox"> Do the dishes</li>
+      <li><input type="checkbox"> Say Hi to Chowon</li>
+      <li><input type="checkbox"> Web-Study</li>
+    </ul>
+  </div>
 
-  <input id='colorchange' type="button" value="change your day" onclick="
-    if(document.querySelector('#colorchange').value === 'change your day'){
-      document.querySelector('body').style.backgroundColor = 'powderblue';
-      document.querySelector('body').style.color = 'red';
-      document.querySelector('#colorchange').value = 'back to boring life';
-    } else{
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
-      document.querySelector('#colorchange').value = 'change your day';
-    }
-  ">
-
-  <div>area</div>
-  <div>area2</div>
-  <hr/>
-
-  <p>Write a <span style="color:powderblue">long</span> sentence here</p>
-  <ul>
-    <li>To do the wash</li>
-    <li>To go for a walk with Athor</li>
-    <li>To say Hi to Chowon</li>
-  </ul>
-  <input type="text"/>
-  <button>input</button>
-  <img scr="mypets">
+    <h2 id="work">Work</h2>
 </body>
 </html>
