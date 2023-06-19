@@ -23,7 +23,7 @@
         </div>
       </nav>
 
-      <div class="container">
+    <div class="container">
         <div class="col-md-6" id="jumbotron">
             <div class="h-100 p-5 text-bg-dark rounded-3">
               <h2>How was the movie?</h2>
@@ -31,10 +31,66 @@
               <button class="btn btn-success" type="button">Learn more</button>
             </div>
           </div>
-      </div>
+    
+    <br/>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <button type="button" class="btn btn-success" id="review-button" onclick="review()">Check Review</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            console.log("시작!")
+
+            $.ajax({
+                url:765f5a5919050e173aef7dd52d71ff47,
+                data:{"key:"value"},
+                type:"POST",
+                success:function(json){
+                     console.log(json)
+                },
+                error:function(err){
+
+                }
+
+            })
+
+        })
+
+        function review(){
+            $('#myModal').modal('show')
+        }
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text-area">
+    <button id=button-area onclick="x()">Add</button>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+   <script>
+    // todo 라는 것은 "text-area"라는 id값을 가진 태그의 값을 가져오는 것. --> text-area란 텍스트 입력창. --> todo를 x()함수에 넣음. x()함수는 Add 버튼을 클릭 했을 때 발동됨
+        function x(){
+            let todo = $("#text-area").val();
+            console.log(todo)
+        }
+   </script> 
+
+</body>
+</html>
+
