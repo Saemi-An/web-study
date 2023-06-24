@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./exercise1.css">
+</head>
+<body>
+    <div>
+        <div>
+        <input id="cb1" type="checkbox" onclick="boxChecked(event)"/>
+        <label for="cb1">Pen</label>
+        </div>
+        
+        <div>
+        <input id="cb2" type="checkbox" onclick="boxChecked(event)"/>
+        <label for="cb2">Pineapple</label>
+        </div>
+        
+        <div>
+        <input id="cb3" type="checkbox" onclick="boxChecked(event)"/>
+        <label for="cb3">Apple</label>
+        </div>
+        
+        </div>
+
+<script>
+function boxChecked(event) {
+        const element = event.target;
+        if(element.type === "checkbox") {
+            if( element.checked ){
+                element.parentNode.style.textDecoration = "line-through";
+                element.parentNode.style.opacity = 0.5;
+    
+                const parent = element.parentElement.parentElement;
+                parent.appendChild(element.parentElement);
+
+            }else{
+                element.parentNode.style.textDecoration = "none";
+                element.parentNode.style.opacity = 1;
+
+                const parent = element.parentElement.parentElement;
+                parent.insertBefore(element.parentElement, parent.firstChild);
+            }
+        }
+    }
+</script>
+</body>
+</html>

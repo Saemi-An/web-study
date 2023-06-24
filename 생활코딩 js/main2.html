@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <h1><a href="index.html">Today's Work</a></h1>
+
+    <!--night_day 버튼(리팩토링 버전)
+        document.querySelector('#night_day') -> this (자기 자신을 가르킴, onclick 안에서)
+        target 변수선언 -> 바디 태그 지칭
+    -->
+    <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+    if(this.value === 'night'){ 
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        //야간모드 설정시 a 태그값들이 하늘색이 되도록
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+        } 
+
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        //주간모드 설정시 a 태그값들이 하늘색이 되도록
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i = i + 1;
+        } 
+    }
+    "/>
+
+    <!--List & Links-->
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="1.html">CSS</a></li>
+        <li><a href="1.html">JavaScript</a></li>
+    </ol>
+
+    <!--긴 문장들-->
+    <p>In mathematics, the derivative shows the sensitivity of change of a function's output with respect to the input. Derivatives are a fundamental tool of calculus. For example, the derivative of the position of a moving object with respect to time is the object's velocity: this measures how quickly the position of the object changes when time advances.
+    <br/>
+    <br/>
+    The derivative of a function of a single variable at a chosen input value, when it exists, is the slope of the tangent line to the graph of the function at that point. The tangent line is the best linear approximation of the function near that input value. For this reason, the derivative is often described as the "instantaneous rate of change", the ratio of the instantaneous change in the dependent variable to that of the independent variable.</p>
+
+    <!--night_day 버튼 맨 아래. 리팩토링 전 원본-->
+    <input id="night_day2" type="button" value="night" onclick="
+    if(document.querySelector('#night_day2').value === 'night'){ 
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day2').value = 'day';
+
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day2').value = 'night';
+    }
+    "/>
+
+</body>
+
+</html>
